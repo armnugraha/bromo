@@ -3,6 +3,12 @@ package com.bromo;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import cl.json.RNSharePackage;
+import com.mapbox.rctmgl.RCTMGLPackage;
+import com.RNFetchBlob.RNFetchBlobPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.BV.LinearGradient.LinearGradientPackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -22,7 +28,13 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new RNSharePackage(),
+            new RCTMGLPackage(),
+          new RNFetchBlobPackage(),
+          new VectorIconsPackage(),
+          new LinearGradientPackage(),
+          new RNGestureHandlerPackage()
       );
     }
 
