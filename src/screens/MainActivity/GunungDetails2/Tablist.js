@@ -63,7 +63,7 @@ export default class Tablist extends Component {
           source={{uri: rowData.img}}
           style={styles.cardImage}
         />
-        <Text style={styles.imageText}>{rowData.name}</Text>
+        <Text>{rowData.name}</Text>
       </View>
     )
   }

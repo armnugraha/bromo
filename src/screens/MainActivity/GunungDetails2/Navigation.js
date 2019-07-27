@@ -12,6 +12,8 @@ import MapboxGL from '@mapbox/react-native-mapbox-gl';
 import sheet from '../../../resources/Themes/maps/sheet';
 import mapMarker from '../../../styles/img/map.png';
 
+import env from '../../../../env';
+
 export const IS_ANDROID = Platform.OS === 'android';
 
 const initialLayout = {
@@ -19,7 +21,7 @@ const initialLayout = {
   width: Dimensions.get('window').width,
 };
 
-MapboxGL.setAccessToken("pk.eyJ1IjoiYXJtbnVncmFoYSIsImEiOiJjanRkamVldTgwMmxrNDRxZmEwbHM1em94In0.nyNlO5m2AYIhz4JEm5vesQ");
+MapboxGL.setAccessToken(env);
 
 const coordinates = [
   [107.6305345, -6.8910646],

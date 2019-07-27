@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
 	},
 
 container: {
-	height: (Metrics.HEIGHT) * 0.38,
+	height: (Metrics.HEIGHT) * 0.48,
+	flex: 1
 },
 
 settingIcon: {
