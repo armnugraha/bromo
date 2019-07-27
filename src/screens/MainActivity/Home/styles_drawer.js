@@ -284,6 +284,13 @@ const styles = StyleSheet.create({
      alignSelf: 'center',
    },
 
+   nameTxtModal: {
+    color: "#6f6f6f",
+    fontSize: Fonts.moderateScale(18),
+    fontFamily: Fonts.type.SFUIDisplayMedium,
+    alignSelf: 'center',
+  },
+
    designationTxt: {
      color: "#b7b7b7",
      fontSize: Fonts.moderateScale(12),

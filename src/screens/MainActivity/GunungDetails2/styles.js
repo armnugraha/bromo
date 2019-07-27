@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
 	},
 
 container: {
-	height: (Metrics.HEIGHT) * 0.48,
-	flex: 1
+	height: (Metrics.HEIGHT) * 0.40,
+	// flex: 1
 },
 
 settingIcon: {
@@ -69,7 +69,7 @@ profileContent: {
 	width:(Metrics.WIDTH),
 	height:(Metrics.HEIGHT * 0.13),
 	paddingHorizontal: (Metrics.WIDTH * 0.06),
-	marginTop: (Metrics.HEIGHT * 0.19),
+	marginTop: (Metrics.HEIGHT * 0.22),
 	flexDirection: 'row',
 	alignSelf: 'flex-start',
 	justifyContent: 'space-between',

@@ -3,6 +3,13 @@ const images = {
   bromo_medium: require("../Images/bromo24.png"),
   main_logo: require("../Images/mainLogo.jpg"),
   ic_nikreuh: require("../Images/ic_launcher_nikreuh.png"),
+
+  ic_n_gate: require("../Images/ic_n_gate.png"),
+  ic_n_pos: require("../Images/ic_n_pos.png"),
+  ic_n_puncak: require("../Images/ic_n_puncak.png"),
+  ic_n_puncak_bayangan: require("../Images/ic_n_puncak_bayangan.png"),
+  ic_n_sumber_air: require("../Images/ic_n_sumber_air.png"),
+
   activeCategory: require("../Images/activeCategory.png"),
   activeGift: require("../Images/activeGift.png"),
   activeHome: require("../Images/activeHome.png"),

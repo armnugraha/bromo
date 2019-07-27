@@ -1,4 +1,4 @@
-import { Platform, StyleSheet } from "react-native";
+import { Platform, StyleSheet, I18nManager } from "react-native";
 import { Images, Metrics,Fonts,Colors } from "../../../resources/Themes";
 
 const styles = StyleSheet.create({
@@ -441,6 +441,388 @@ const styles = StyleSheet.create({
     marginTop: Metrics.WIDTH * 0.01,
     marginRight: Metrics.WIDTH * 0.024,
   },
+
+  btnsec:{
+		height: (Metrics.HEIGHT*0.12),
+		justifyContent: 'center',
+		backgroundColor: Colors.transparent
+  },
+  
+  discoverBg: {
+		backgroundColor:'#51B252',
+		alignSelf: 'center',
+		justifyContent: 'center',
+		paddingLeft: (Metrics.WIDTH * 0.08),
+		paddingRight: (Metrics.WIDTH * 0.08),
+		paddingTop: (Metrics.WIDTH * 0.02),
+		paddingBottom: (Metrics.WIDTH * 0.02),
+		borderRadius: (Metrics.WIDTH * 0.06),
+	},
+
+	discoverTxt: {
+		fontFamily: Fonts.type.sfuiDisplayMedium,
+		fontSize: Fonts.moderateScale(12),
+		color: Colors.snow,
+		textAlign: 'center'
+  },
+
+  bottomModal: {
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    margin: 0,
+    ...Platform.select({
+      ios: {
+        marginTop:65
+      },
+      android: {
+        marginTop:45
+      }
+    }),
+
+  },
+  mainview:{
+    alignItems: 'flex-start',
+    height: 300,
+    backgroundColor: 'white',
+    borderRadius:10,
+    width: Metrics.WIDTH*0.9,
+  },
+  headerbottom:{
+    height: 50,
+    width: Metrics.WIDTH*0.9,
+    backgroundColor: 'transparent',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  semirow:{
+    width: Metrics.WIDTH,
+    height:125,
+    backgroundColor: 'transparent',
+    flexDirection: 'row'
+  },
+  horizontalline:{
+    height: 0.5,
+    backgroundColor: '#f2f2f2',
+    width: Metrics.WIDTH*0.9
+  },
+  verticalline:{
+    height: 125,
+    backgroundColor: '#f2f2f2',
+    width: 0.5
+  },
+  listrow:{
+    backgroundColor: 'transparent',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: Metrics.WIDTH*0.3,
+    height: 125
+  },
+
+
+
+  headertxt:{
+    fontSize: Fonts.moderateScale(32),
+    textAlign: 'center',
+    color:'white'
+  },
+  screenBg: {
+  	flex: 1,
+  	width: Metrics.WIDTH,
+  	height: Metrics.HEIGHT,
+  	position: 'absolute'
+  },
+  body: {
+		flex: 2,
+		alignItems: 'center',
+		backgroundColor: 'transparent'
+  },
+
+  badgetext:{
+    color:'white',
+    fontSize: Fonts.moderateScale(13),
+    textAlign: 'center',
+    backgroundColor: 'transparent'
+  },
+  badgeview:{
+    backgroundColor: '#d9b63e',
+    marginLeft: 10,
+    borderRadius: 10,
+    height: 17,
+    width: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center'
+  },
+  modalbg:{
+    flex: 1,
+  	width: Metrics.WIDTH,
+  	height: Metrics.HEIGHT*0.5,
+     margin:-(Metrics.WIDTH*0.001),
+  },
+  rowicon:{
+    backgroundColor: 'transparent',
+    height: 20,
+    width: 20,
+    tintColor: '#36343f',
+    resizeMode: 'contain',
+    alignSelf: 'center',
+    alignItems: 'center'
+  },
+  rowtxt:{
+    color:'#919cae',
+    fontSize: Fonts.moderateScale(15),
+    backgroundColor: 'transparent',
+    textAlign: 'left',
+    marginTop: 12,
+    fontFamily: Fonts.type.sfuiDisplayLight
+  },
+
+
+  linebg:{
+    backgroundColor: 'rgba(61,61,61,0.9)',
+    height:0.5,
+    width: Metrics.WIDTH*0.6
+  },
+  imageLogoMountify: {
+    alignSelf: 'center',
+    width: 100,
+    height: 80,
+    marginBottom: 20
+  },
+
+
+  userpic:{
+    width: (Metrics.WIDTH) * 0.13,
+    height: (Metrics.WIDTH) * 0.13,
+    borderRadius: (Metrics.WIDTH)* 0.065,
+    borderWidth: 2,
+    borderColor: "#FFFFFF",
+    alignSelf: 'center',
+    marginLeft: (Metrics.WIDTH) * 0.1,
+  },
+  closeview:{
+    borderTopLeftRadius:180,
+    height:90,
+    width: 90,
+    backgroundColor: '#d9b63e',
+    position: 'absolute',
+    // justifyContent: 'flex-end',
+    // alignItems: 'center',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    bottom: 0,
+    right: 0
+  },
+  mainclose:{
+    // backgroundColor: "red",
+    height:70,
+    width: 50,
+
+    // alignItems: 'flex-start',
+  },
+  closeicon:{
+    color:'white',
+    fontSize: Fonts.moderateScale(80),
+    backgroundColor: 'transparent',
+    alignSelf: 'flex-start'
+    // textAlign: 'right',
+  },
+
+
+  lefts: {
+    flex: 1,
+		 backgroundColor: 'transparent',
+     marginRight: 15,
+     marginTop: 15,
+     alignSelf: 'flex-end',
+     justifyContent: 'flex-end'
+  },
+  headerModal: {
+    backgroundColor: 'rgba(5,6,6,0.5)',
+
+    borderBottomWidth: 0,
+    ...Platform.select({
+      ios: {},
+      android: {
+			}
+    }),
+		elevation: 0
+  },
+  triangles:{
+    width: 0,
+    height: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderLeftWidth: 8,
+    borderRightWidth: 8,
+    borderBottomWidth: 16,
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
+    borderBottomColor: 'white'
+  },
+
+  headerNameView:{
+    flexDirection: 'column',
+    marginTop: 10
+  },
+
+  headerTitle:{
+    color:'white'
+  },
+
+  headerArrow:{
+    color:'white',
+    alignItems:'center',
+    alignSelf: 'center',
+    justifyContent: 'center'
+  },
+
+  filterText:{
+    color:'#292d48',
+    textAlign:'center',
+    justifyContent:'center'
+  },
+
+  listMain: {
+    backgroundColor: 'white',
+    // paddingLeft: (Metrics.WIDTH*0.005)
+  },
+
+  listGenderMain: {
+    justifyContent: 'space-between',
+    height:(Metrics.HEIGHT*0.08),
+    borderColor: '#e5e5e5',
+    borderBottomWidth: 0.5
+  },
+
+  listTitle: {
+    color:'#4c4c4c',
+    fontFamily:Fonts.type.sfuiDisplayRegular,
+    fontSize:Fonts.moderateScale(18)
+  },
+
+  listAgeMain: {
+    justifyContent: 'space-between',
+    height:(Metrics.HEIGHT*0.08),
+    borderColor: '#e5e5e5',
+    borderBottomWidth: 1
+  },
+
+  listAgeRight: {
+    flexDirection:'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  listRightText: {
+    color:'#a5a5a5',
+    fontFamily:Fonts.type.sfuiDisplayRegular,
+    fontSize:Fonts.moderateScale(18)
+  },
+
+  arrowForword: {
+    color:'#c7c7cc',
+    paddingLeft: (Metrics.WIDTH*0.02),
+    fontSize: Fonts.moderateScale(30)
+  },
+
+  markerStyle: {
+    height:(Metrics.HEIGHT*0.035),
+    width: (Metrics.HEIGHT*0.035),
+    backgroundColor:'#f87362',
+    borderWidth: 0.5,
+    borderColor: '#fa6982'
+  },
+
+  containerStyle: {
+    alignSelf: 'center',
+    height:5
+  },
+
+  trackStyle: {
+    height: (Metrics.HEIGHT*0.005),
+    borderRadius: 4
+  },
+
+  listDistanceMain: {
+    justifyContent: 'space-between',
+    height:(Metrics.HEIGHT*0.08),
+    borderColor: Colors.transparent
+  },
+
+  listDistanceRight: {
+    flexDirection:'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  arrowBack: {
+    color:'#c7c7cc',
+    paddingRight: (Metrics.WIDTH*0.02),
+    fontSize: Fonts.moderateScale(30)
+  },
+
+  styleGradient: {
+    height: (Metrics.HEIGHT * 0.038),
+    width: (Metrics.WIDTH * 0.48),
+    borderRadius: (Metrics.HEIGHT * 0.02),
+  },
+
+  leftBtnRadius: {
+    borderTopLeftRadius: I18nManager.isRTL ? 0 : (Metrics.HEIGHT * 0.02),
+    borderBottomLeftRadius: I18nManager.isRTL ? 0 : (Metrics.HEIGHT * 0.02),
+    borderTopRightRadius: I18nManager.isRTL ? (Metrics.HEIGHT * 0.02) : 0,
+    borderBottomRightRadius: I18nManager.isRTL ? (Metrics.HEIGHT * 0.02) : 0,
+  },
+
+
+  rightBtnRadius: {
+    borderTopRightRadius: I18nManager.isRTL ? 0 : (Metrics.HEIGHT * 0.02),
+    borderBottomRightRadius: I18nManager.isRTL ? 0 : (Metrics.HEIGHT * 0.02),
+    borderTopLeftRadius: I18nManager.isRTL ? (Metrics.HEIGHT * 0.02) : 0,
+    borderBottomLeftRadius: I18nManager.isRTL ? (Metrics.HEIGHT * 0.02) : 0,
+  },
+
+  segmentTabSec: {
+    height: (Metrics.HEIGHT * 0.038),
+    width: (Metrics.WIDTH * 0.48),
+    borderRadius: (Metrics.HEIGHT * 0.02),
+    backgroundColor: Colors.transparent,
+  },
+
+  selectedSegmentTab: {
+    height: (Metrics.HEIGHT * 0.038),
+    width: (Metrics.WIDTH * 0.16),
+    backgroundColor: Colors.transparent,
+    borderColor: Colors.transparent,
+    alignItems: 'center',
+    justifyContent: 'center',
+		overflow: 'visible'
+  },
+
+  segmentTab: {
+    height: (Metrics.HEIGHT * 0.038),
+    width: (Metrics.WIDTH * 0.16),
+    backgroundColor: '#e6e6e6',
+    borderColor: Colors.transparent,
+    alignItems: 'center',
+    justifyContent: 'center',
+		overflow: 'hidden'
+  },
+
+  activeTab: {
+    fontSize: Fonts.moderateScale(12),
+    fontFamily: Fonts.type.sfuiDisplayRegular,
+    color: Colors.snow
+  },
+
+  normalTab: {
+    fontSize: Fonts.moderateScale(12),
+    fontFamily: Fonts.type.sfuiDisplayRegular,
+    color: '#666666'
+  },
+
 });
 
 export default styles;
