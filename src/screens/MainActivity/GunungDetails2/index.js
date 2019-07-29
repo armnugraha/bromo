@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Text, View, Image, StatusBar, Platform, ImageBackground,Dimensions,TouchableOpacity, ListView, ScrollView, BackHandler, I18nManager} from 'react-native';
 import { Container, Button, Icon, Right, Item, Input, Header, Footer, FooterTab, Left, Body, Title, Content, Form, Label} from 'native-base';
@@ -158,14 +157,20 @@ export default class GunungDetails extends Component {
              </View>
            </View>
          </View>
-         <TabViewAnimated
-           style={styles.container}
-           navigationState={this.state}
-           renderScene={this._renderScene}
-           renderHeader={this._renderHeader}
-           onIndexChange={this._handleIndexChange}
-           initialLayout={initialLayout}/>
-         </ScrollView>
+
+        <View style={[ styles.container, { backgroundColor: 'transparent'} ]}>
+          <View style={styles.mapViewCard}>
+            <Navigation/>
+          </View>
+        </View>
+
+        <View style={styles.imageViewList}></View>
+
+        <View style={[ styles.container, { backgroundColor: 'transparent'} ]}>
+          <Tablist data={this.props.navigation.state.params.data.id}/>
+        </View>
+
+      </ScrollView>
     </Container>
 
     );

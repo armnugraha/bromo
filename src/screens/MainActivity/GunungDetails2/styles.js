@@ -233,6 +233,16 @@ tabBarView:{
 	paddingVertical:(Metrics.HEIGHT*0.012)
 },
 
+mapViewCard:{
+	height:(Metrics.HEIGHT*0.52),
+	borderRadius: 50,
+	marginTop: (Metrics.HEIGHT * 0.008),
+},
+
+imageViewList:{
+	marginTop: (Metrics.HEIGHT * 0.16),
+}
+
 
 });
 

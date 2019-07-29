@@ -183,14 +183,14 @@ export default class Home extends Component {
     return true;
   };
 
-  async fetchAll(){
+  fetchAll(){
     Api.get('public/data/').then(resp =>{
       this.setState({dataListGunung: resp.data})
       this.setState({isLoadingAll: false})
     });
   }
 
-  async fetchRekomendasi(){
+  fetchRekomendasi(){
     Api.get('public/rekomendasi/').then(resp =>{
       this.setState({dataListRekomendasi: resp.data})
       this.setState({isLoading: false})
